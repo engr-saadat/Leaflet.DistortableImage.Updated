@@ -1,5 +1,5 @@
 {
-  "name": "leaflet-distortableimage",
+  "name": "leaflet-distortableimage-updated",
   "version": "0.21.9",
   "description": "Leaflet plugin enabling image overlays to be distorted, stretched, and warped (built for Public Lab's MapKnitter: http://publiclab.org).",
   "engines": {

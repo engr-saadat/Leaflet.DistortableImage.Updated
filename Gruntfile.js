@@ -83,52 +83,39 @@ module.exports = (grunt) => {
       },
       source: {
         files: ["src/**/*.js", "test/**/*.js", "Gruntfile.js"],
-        tasks: ["eslint", "karma:development:start"],
+        tasks: ["eslint"],
       },
     },
   });
 
-  /* Run tests once. */
-  grunt.registerTask("test", ["eslint", "karma:test"]);
-
-  grunt.registerTask("build", [
-    "eslint",
-    "karma:development:start",
-    "coverage",
-
-    "webpack",
-  ]);
+  grunt.registerTask("build", ["eslint", "coverage", "webpack"]);
 
   // recompile svg icon sprite
   grunt.registerTask("icons", ["svgmin", "svg_sprite"]);
 
-  grunt.registerTask(
-    "coverage",
-    "CLI reporter for karma-coverage",
-    () => {
-      let coverageReports = grunt.file.expand("coverage/*/coverage.txt");
-      let reports = {};
-      let report;
-      let i;
-      let len;
+  grunt.registerTask("coverage", "CLI reporter for karma-coverage", () => {
+    let coverageReports = grunt.file.expand("coverage/*/coverage.txt");
+    let reports = {};
+    let report;
+    let i;
+    let len;
 
-      for (i = 0, len = coverageReports.length; i < len; i++) {
-        report = grunt.file.read(coverageReports[i]);
-        if (!reports[report]) {
-          reports[report] = [coverageReports[i]];
-        } else {
-          reports[report].push(coverageReports[i]);
-        }
-      }
-
-      for (report in reports) {
-        if (reports.hasOwnProperty(report)) {
-          for (i = 0, len = reports[report].length; i < len; i++) {
-            grunt.log.writeln(reports[report][i]);
-          }
-          grunt.log.writeln(report);
-        }
+    for (i = 0, len = coverageReports.length; i < len; i++) {
+      report = grunt.file.read(coverageReports[i]);
+      if (!reports[report]) {
+        reports[report] = [coverageReports[i]];
+      } else {
+        reports[report].push(coverageReports[i]);
       }
     }
-  );
+
+    for (report in reports) {
+      if (reports.hasOwnProperty(report)) {
+        for (i = 0, len = reports[report].length; i < len; i++) {
+          grunt.log.writeln(reports[report][i]);
+        }
+        grunt.log.writeln(report);
+      }
+    }
+  });
 };
