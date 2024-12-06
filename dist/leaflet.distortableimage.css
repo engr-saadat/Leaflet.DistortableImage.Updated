@@ -157,16 +157,21 @@ input.ldi {
   background-color: #efefef;
 }
 
+a.leaflet-toolbar-icon.rotate {
+  background-color: transparent;
+  border: transparent;
+}
+
 a.leaflet-toolbar-icon.rotate.selected-mode,
 a.leaflet-toolbar-icon.freeRotate.selected-mode {
-  background-color: rgba(251, 18, 14, 0.75);
-  border: inset 0.5px lightgray;
+  background-color: transparent;
+  border: transparent;
 }
 
 a.leaflet-toolbar-icon.rotate.selected-mode .ldi-icon,
 a.leaflet-toolbar-icon.freeRotate.selected-mode .ldi-icon,
 a.leaflet-toolbar-icon.drag.selected-mode .ldi-icon {
-  fill: white;
+  fill: transparent;
 }
 
 a.leaflet-toolbar-icon.drag.selected-mode {
@@ -176,8 +181,8 @@ a.leaflet-toolbar-icon.drag.selected-mode {
 
 a.leaflet-toolbar-icon.distort.selected-mode,
 a.leaflet-toolbar-icon.scale.selected-mode {
-  background-color: hsla(239, 97%, 55%, 0.75);
-  border: inset 0.5px lightgray;
+  background-color: transparent;
+  border: transparent;
 }
 
 a.leaflet-toolbar-icon.distort.selected-mode .ldi-icon,
@@ -203,7 +208,7 @@ a.leaflet-toolbar-icon.lock.selected-mode .ldi-icon {
   fill: white;
 }
 
-a.leaflet-toolbar-icon[title='Loading...'] {
+a.leaflet-toolbar-icon[title="Loading..."] {
   background-color: whitesmoke;
   pointer-events: none;
   cursor: default;
@@ -317,4 +322,17 @@ input[type="text"]::-webkit-input-placeholder {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.leaflet-toolbar-0 > li > .leaflet-toolbar-icon {
+  background-color: transparent !important;
+}
+.leaflet-popup-toolbar > li > .leaflet-toolbar-icon {
+  border-right: none !important;
+}
+
+.leaflet-toolbar-0 {
+  border: none !important;
+}
+.leaflet-toolbar-tip {
+  display: none;
 }

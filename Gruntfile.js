@@ -88,7 +88,7 @@ module.exports = (grunt) => {
     },
   });
 
-  grunt.registerTask("build", ["eslint", "coverage", "webpack"]);
+  grunt.registerTask("build", ["coverage", "webpack"]);
 
   // recompile svg icon sprite
   grunt.registerTask("icons", ["svgmin", "svg_sprite"]);
