@@ -336,3 +336,46 @@ input[type="text"]::-webkit-input-placeholder {
 .leaflet-toolbar-tip {
   display: none;
 }
+
+.iconStyle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.leaflet-toolbar-icon.rotate.selected-mode .iconStyle {
+  background-color: black;
+  border: none;
+}
+a.leaflet-toolbar-icon.rotate.selected-mode .iconStyle svg g path {
+  fill: white;
+}
+a.leaflet-toolbar-icon.rotate .iconStyle svg g path {
+  fill: black;
+}
+a.leaflet-toolbar-icon.scale.selected-mode .iconStyle {
+  background-color: black;
+  border: none;
+}
+a.leaflet-toolbar-icon.scale.selected-mode .iconStyle svg path {
+  fill: white;
+}
+a.leaflet-toolbar-icon.scale .iconStyle svg path {
+  fill: black;
+}
+
+a.leaflet-toolbar-icon .iconStyle.opacityIconStyle {
+  background-color: white;
+  border: none;
+}
+a.leaflet-toolbar-icon .iconStyle.opacityIconStyle svg path {
+  fill: black;
+}
+.leaflet-div-icon {
+  background: transparent !important;
+  border: none;
+}
