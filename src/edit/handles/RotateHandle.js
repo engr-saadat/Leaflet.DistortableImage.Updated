@@ -2,8 +2,8 @@ L.RotateHandle = L.EditHandle.extend({
   options: {
     TYPE: "rotate",
     icon: L.divIcon({
-      html: `<div style="    width: 20px;
-      height: 20px;
+      html: `<div style="    width: 26px;
+      height: 26px;
       background: black;
       display: flex;
       justify-content: center;
@@ -16,7 +16,7 @@ L.RotateHandle = L.EditHandle.extend({
       <path style="stroke: none; fill-rule: nonzero;" d="M 10.125 2.339844 L 10.125 0 L 6.75 3.375 L 10.125 6.75 L 10.125 4.613281 C 12.6875 5.136719 14.625 7.410156 14.625 10.125 C 14.625 13.226562 12.101562 15.75 9 15.75 C 8.054688 15.75 7.121094 15.511719 6.300781 15.0625 L 5.21875 17.035156 C 6.371094 17.664062 7.679688 18 9 18 C 13.34375 18 16.875 14.464844 16.875 10.125 C 16.875 6.167969 13.933594 2.886719 10.125 2.339844 Z M 10.125 2.339844 " id="svg_3" fill="#fff" fill-opacity="1"/>
       </g></g></svg></div>`,
 
-      iconAnchor: [10, 10],
+      iconAnchor: [13, 13],
     }),
   },
 
