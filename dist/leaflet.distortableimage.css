@@ -377,5 +377,5 @@ a.leaflet-toolbar-icon .iconStyle.opacityIconStyle svg path {
 }
 .leaflet-div-icon {
   background: transparent !important;
-  border: none;
+  border: none !important;
 }
