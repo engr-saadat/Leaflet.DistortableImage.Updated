@@ -9,6 +9,10 @@ L.RotateHandle = L.EditHandle.extend({
       justify-content: center;
       align-items: center;
           padding: 2px;
+          position: relative;
+    top: -5px;
+    left: -5px;
+
       border-radius: 50%;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" version="1.1"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
       <g class="currentLayer" style=""><title>Layer 1</title><g id="surface1" class="" fill="#fff" fill-opacity="1">
       <path style="stroke: none; fill-rule: nonzero;" d="M 1.328125 8.335938 L 3.519531 8.84375 C 3.734375 7.933594 4.179688 7.078125 4.808594 6.375 L 3.132812 4.875 C 2.25 5.859375 1.628906 7.054688 1.328125 8.335938 Z M 1.328125 8.335938 " id="svg_1" fill="#fff" fill-opacity="1"/>
